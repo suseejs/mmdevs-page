@@ -1,10 +1,10 @@
 <div class="hero">
   <img
-    src="/images/logo-180.webp"
+    src="{{ '/images/logo-180.webp' | relative_url }}"
     srcset="
-      /images/logo-180.webp 180w,
-      /images/logo-330.webp 330w,
-      /images/logo-495.webp 495w
+      {{ '/images/logo-180.webp' | relative_url }} 180w,
+      {{ '/images/logo-330.webp' | relative_url }} 330w,
+      {{ '/images/logo-495.webp' | relative_url }} 495w
     "
     sizes="180px"
     alt="Profile Image"

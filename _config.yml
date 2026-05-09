@@ -1,4 +1,5 @@
-url: https://suseejs.github.io/mmdevs-page/
+url: https://suseejs.github.io
+baseurl: /mmdevs-page
 # site
 title: MMDEVS.ORG
 source: app
