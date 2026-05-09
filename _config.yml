@@ -1,0 +1,24 @@
+url:
+# site
+title: MMDEVS.ORG
+source: app
+markdown: kramdown
+sass:
+  style: compressed
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+exclude:
+  - Makefile
+collections:
+  docs:
+    output: true
+terser:
+  enabled: true # disable to skip minification
+  output_dir: js # destination directory under site dest
+  compress: true # enable compression
+  mangle: true # enable name mangling
+  source_map: true # produce .map files
+  exclude:
+    - "**/*.min.js" # glob patterns (relative to source dir) to skip

@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<head>
+  <title>
+    {% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}
+  </title>
+</head>
+{% include docs_nav.html %}
+<div class="markdown-body">{{ content }}</div>
