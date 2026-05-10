@@ -1,7 +1,7 @@
 url: https://docs.mmdevs.org/
 # baseurl: /mmdevs-page
 # site
-title: MMDEVS.ORG
+title: mmdevs
 source: app
 markdown: kramdown
 sass:

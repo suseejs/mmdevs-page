@@ -1,6 +1,6 @@
 ---
-layout: docs
-title: MMSD CLI
+layout: markdown
+title: mmsd cli
 ---
 
 <!-- markdownlint-disable MD001 -->
