@@ -292,7 +292,11 @@ hr {
   background: var(--md-inline) !important;
   border-radius: 4px !important;
 }
-
+.markdown-body h3 code {
+  padding: 0.15em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: var(--ptm-font-sans);
+}
 .markdown-body pre {
   padding: 0.9rem 1rem;
   overflow-x: auto;
@@ -364,6 +368,11 @@ hr {
   color: var(--ptm-color-h56);
   font-family: var(--ptm-font-orb);
   margin: 18px;
+}
+.hero p code {
+  padding: 0.15em 0.4em !important;
+  border-radius: 4px !important;
+  font-family: var(--ptm-font-sans);
 }
 
 /* Top Btn */

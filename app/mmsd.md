@@ -1,13 +1,13 @@
 ---
 layout: markdown
-title: mmsd cli
+title: MMSD CLI
 ---
 
 <!-- markdownlint-disable MD001 -->
 
 ### Features
 
-1. Check whether the subdomain you want to register is available.
+1. Check whether your requested subdomain is available.
 2. Generate a registration JSON file.
 
 ---
@@ -15,7 +15,6 @@ title: mmsd cli
 ### CLI Usage
 
 ```text
-
 MMSD CLI.
 
 Usage:
@@ -59,7 +58,7 @@ Subdomain "doc" is reserved by MMDEVS.ORG. Please try another name.
 ```text
 npx mmsd phowa
 [Success]
-Register JSON file "subdomains/phowa.json" was created.
+Registration JSON file "subdomains/phowa.json" was created.
 ```
 
 - **Existing File:**

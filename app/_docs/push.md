@@ -5,15 +5,15 @@ title: Push to current branch
 
 ## Push to current branch
 
-Running local helper script in terminal :
+Run the local helper script in your terminal:
 
 ```sh
 npm run commit
 ```
 
-The commit helper will :
+The commit helper will:
 
-- Ask for request type (`Register`, `Update`, `Remove`).
+- Ask for a request type (`Register`, `Update`, `Remove`).
 
 ```text
 Select a number for commit type:
@@ -23,7 +23,7 @@ Select a number for commit type:
 Enter number:
 ```
 
-- Ask for a commit message value (recommended to use your requested subdomain name).
+- Ask for a commit message (it is recommended to use your requested subdomain name).
 
 ```text
 Select a number for commit type:
@@ -34,21 +34,21 @@ Enter number: 1
 Enter commit message:
 ```
 
-- Commit with format: `<Type> : <name>.mmdevs.org`.
+- Create a commit with this format: `<Type> : <name>.mmdevs.org`.
 
-- After that auto push to your current branch.
+- Automatically push to your current branch.
 
 ### Notes
 
-By running `npm run commit` and commit with formatted commit message `<Type> : <name>.mmdevs.org` will help maintainers to check and approve more easier.
+Using `npm run commit` with the `<Type> : <name>.mmdevs.org` commit format helps maintainers review and approve requests more easily.
 
 ---
 
-- Pervious step :
+- Previous step:
   - [Register a new subdomain][prev]
   - [Update a registered subdomain][prev_1]
   - [Remove a registered subdomain][prev_2]
-- Next step : [Open pull request][next]
+- Next step: [Open pull request][next]
 
 ---
 

@@ -7,16 +7,16 @@ title: Register
 
 ## Register a new subdomain
 
-You can request a new subdomain by doing one of the following :
+You can request a new subdomain using one of the following methods:
 
-1. Add register JSON file to `subdomains/` directory.
-2. Run the command `npx mmsd <sub_domain>` in your terminal. The CLI tool `mmsd` will create a `<sub_domain>.json` file in the `subdomains` directory.(Recommended)
+1. Add a registration JSON file to the `subdomains/` directory.
+2. Run `npx mmsd <sub_domain>` in your terminal. The `mmsd` CLI creates `<sub_domain>.json` in the `subdomains/` directory. (Recommended)
 
-### Using mmsd cli
+### Using mmsd CLI
 
-Recommended to use `mmsd` cli that will available after [initial setup][isg].That will check the name of your subdomain is available or not, if available create register JSON file by running the following single commend.
+We recommend using the `mmsd` CLI, which becomes available after the [initial setup][isg]. It checks whether your requested subdomain is available and, if available, creates the registration JSON file with a single command.
 
-For detail about [`mmsd-cli`][mmsd] and there are [examples][mmsd_example].
+For details about [`mmsd-cli`][mmsd], see the [examples][mmsd_example].
 
 ```sh
 npx mmsd <your_requested_domain>
@@ -25,7 +25,7 @@ npx mmsd <your_requested_domain>
 
 ### Register JSON file reference
 
-Request file must be JSON and match this shape :
+Your request file must be JSON and match this structure:
 
 ```json
 {
@@ -37,10 +37,10 @@ Request file must be JSON and match this shape :
 }
 ```
 
-- Full example and detailed notes : [example.jsonc][example_json]
-- Validation is enforced by : [JSON Schema][json_schema]
+- Full example and detailed notes: [example.jsonc][example_json]
+- Validation is enforced by: [JSON Schema][json_schema]
 
-**Field reference :**
+**Field reference:**
 
 1. `sub_domain` (required) The name part of `<sub_domain>.mmdevs.org`.
 2. `cname_value` (required) Must be one of the [supported CNAME targets](#supported-cname-targets).
@@ -49,7 +49,7 @@ Request file must be JSON and match this shape :
 
 ### Supported CNAME targets
 
-Only these targets are accepted :
+Only these targets are accepted:
 
 1. GitHub Pages user domain: `<username>.github.io`
 2. Vercel default CNAME: `cname.vercel-dns.com`
@@ -57,15 +57,15 @@ Only these targets are accepted :
 
 ### Notes
 
-> If you not using `mmsd` cli :
+> If you are not using the `mmsd` CLI:
 >
 > 1. File extension must be `.json`.
 > 2. Filename should match `sub_domain`. Example: `sub_domain: "foo"` -> `subdomains/foo.json`.
 
 ---
 
-- Pervious step : [Initial setup guide][prev]
-- Next step : [Push to current branch][next]
+- Previous step: [Initial setup guide][prev]
+- Next step: [Push to current branch][next]
 
 ---
 

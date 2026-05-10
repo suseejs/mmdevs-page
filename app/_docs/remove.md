@@ -5,17 +5,17 @@ title: Remove
 
 ## Remove your registered subdomain
 
-To remove your registered subdomain, update the request_type in your .json file in the subdomains directory.
+To remove your registered subdomain, update `request_type` in your `.json` file in the `subdomains/` directory.
 
-`MMDEVS.ORG` has recorded your `github_user_login` and `github_user_id` when you registered subdomain.So, you need to be that user.
+`MMDEVS.ORG` records your `github_user_login` and `github_user_id` when you register a subdomain, so you must submit the removal request as that same user.
 
 ### Steps
 
 - Find and edit the existing `<your_subdomain>.json` file in `subdomains/` directory.
 
-- Set `request_type` to `update` in `<your_subdomain>.json`.
+- Set `request_type` to `remove` in `<your_subdomain>.json`.
 
-**Example :**
+**Example:**
 
 ```jsonc
 {
@@ -28,8 +28,8 @@ To remove your registered subdomain, update the request_type in your .json file 
 
 ---
 
-- Pervious step : [Initial setup guide][prev]
-- Next step : [Push to current branch][next]
+- Previous step: [Initial setup guide][prev]
+- Next step: [Push to current branch][next]
 
 ---
 

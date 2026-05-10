@@ -11,7 +11,7 @@ title: Initial setup guide
 
 <!-- markdownlint-disable MD059 -->
 
-Fork `mmdevs.org` repository by clicking [here][fork].
+Fork the `mmdevs.org` repository by clicking [here][fork].
 
 #### 2. Create a branch
 
@@ -21,13 +21,13 @@ git switch -c your_branch
 
 #### 3. Local setup
 
-**Install Dependencies :**
+**Install dependencies:**
 
 ```sh
 npm install
 ```
 
-**Install githooks :**
+**Install Git hooks:**
 
 ```sh
 npm run hooks:install
@@ -35,7 +35,7 @@ npm run hooks:install
 
 ---
 
-- Next step :
+- Next steps:
   - [Register a new subdomain][next]
   - [Update a registered subdomain][next_1]
   - [Remove a registered subdomain][next_2]

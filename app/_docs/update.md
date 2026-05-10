@@ -6,8 +6,7 @@ title: Update
 ## Update your registered subdomain
 
 To update the `cname_value` of your registered subdomain, edit your `.json` file in the `subdomains` directory.
-
-`MMDEVS.ORG` has recorded your `github_user_login` and `github_user_id` when you registered subdomain.So, you need to be that user.
+You must be the owner of that subdomain.
 
 ### Steps
 
@@ -17,7 +16,7 @@ To update the `cname_value` of your registered subdomain, edit your `.json` file
 
 - Set `request_type` to `update` in `<your_subdomain>.json`.
 
-**Example :**
+**Example:**
 
 ```jsonc
 {
@@ -30,12 +29,12 @@ To update the `cname_value` of your registered subdomain, edit your `.json` file
 
 ### Notes
 
-Do not touch `sub_domain` field when you updating `<your_subdomain>.json` file(that mean do not change subdomain name).
+Do not change the `sub_domain` field when updating `<your_subdomain>.json` (that means you must not change the subdomain name).
 
 ---
 
-- Pervious step : [Initial setup guide][prev]
-- Next step : [Push to current branch][next]
+- Previous step: [Initial setup guide][prev]
+- Next step: [Push to current branch][next]
 
 ---
 
