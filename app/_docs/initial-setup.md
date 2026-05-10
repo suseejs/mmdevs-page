@@ -35,11 +35,16 @@ npm run hooks:install
 
 ---
 
-- Next step : [Register a new subdomain][register]
+- Next step :
+  - [Register a new subdomain][next]
+  - [Update a registered subdomain][next_1]
+  - [Remove a registered subdomain][next_2]
 
 ---
 
 <!-- markdownlint-disable MD053 -->
 
 [fork]: https://github.com/phothinmg/mmdevs.org/fork
-[register]: /docs/register
+[next]: /docs/register
+[next_1]: /docs/update
+[next_2]: /docs/remove
