@@ -16,8 +16,9 @@ Community-managed subdomains for developers from Myanmar.
 
 ### How to get a subdomain
 
-1. Follow our ["Initial setup guide"][init].
-2. Register a new subdomain see detail ["Register a new subdomain"][register].
+1. Follow our [Initial setup guide][init].
+2. [Register a new subdomain][register].
+3. [Push to current branch][push]
 
 <!-- markdownlint-disable MD053 -->
 
