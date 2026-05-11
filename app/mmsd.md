@@ -5,6 +5,8 @@ title: MMSD CLI
 
 <!-- markdownlint-disable MD001 -->
 
+## MMSD Cli
+
 ### Features
 
 1. Check whether your requested subdomain is available.

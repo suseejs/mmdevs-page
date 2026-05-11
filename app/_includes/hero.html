@@ -1,17 +1,16 @@
 <div class="hero">
   <img
-    src="{{ '/images/logo-180.webp' | relative_url }}"
+    src="{{ '/images/logo-330.webp' | relative_url }}"
     srcset="
-      {{ '/images/logo-180.webp' | relative_url }} 180w,
       {{ '/images/logo-330.webp' | relative_url }} 330w,
-      {{ '/images/logo-495.webp' | relative_url }} 495w
+      {{ '/images/logo-495.webp' | relative_url }} 495w,
+      {{ '/images/logo-660.webp' | relative_url }} 660w,
     "
-    sizes="180px"
+    sizes="330px"
     alt="Profile Image"
-    width="180"
-    height="180"
+    width="330"
+    height="330"
     fetchpriority="high"
   />
-  <p>Documentation for <code>mmdevs.org</code></p>
   {% include nav.html %}
 </div>

@@ -4,48 +4,17 @@ layout: home
 
 <!-- markdownlint-disable MD041 -->
 
-### About `mmdevs.org`
+**_Community-managed subdomains for developers from Myanmar._**
 
-A community-managed subdomain service for developers from Myanmar.
+### Who can request a subdomain
 
-### Prerequisites
+- You are a GitHub user from Myanmar.
+- You are requesting a real project or personal page with reasonable content.
+- You can prove ownership or control of the target site.
 
-1. Runtime: Node.js (current LTS recommended)
-2. Package Manager: npm (standard)
-3. You are a GitHub user from Myanmar.
-4. You are requesting a subdomain for a real project or personal page with reasonable content.
+### Quick Start
 
-### Register a new subdomain
-
-- Follow our [Initial setup guide][init].
-- [Register a new subdomain][register].
-- [Push to current branch][push]
-- [Open pull request][pr]
-
-### Update a registered subdomain
-
-- Follow our [Initial setup guide][init].
-- [Update a registered subdomain][update].
-- [Push to current branch][push]
-- [Open pull request][pr]
-
-### Remove a registered subdomain
-
-- Follow our [Initial setup guide][init].
-- [Remove a registered subdomain][remove].
-- [Push to current branch][push]
-- [Open pull request][pr]
-
-### Setup for hosting provider
-
-We currently support GitHub Pages and sites hosted on Vercel. See details on [this page][provider].
-
-<!-- markdownlint-disable MD053 -->
-
-[init]: /docs/initial-setup
-[register]: /docs/register
-[update]: /docs/update
-[remove]: /docs/remove
-[push]: /docs/push
-[pr]: /docs/pr
-[provider]: /docs/provider
+- Follow the steps in our [guide](guide).
+- Add or edit one JSON file in `subdomains/`. [See detail about using mmsd cli to add a new JSON file](mmsd).
+- Open a pull request.
+- Maintainers validate and apply DNS on approval.

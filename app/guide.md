@@ -1,0 +1,281 @@
+---
+layout: guide
+---
+
+<!-- markdownlint-disable MD041 -->
+<!-- markdownlint-disable MD024 -->
+
+## Getting Started
+
+### Setup
+
+- [Fork][fork] the `mmdevs.org` repository.
+- Create a branch.
+
+```sh
+git switch -c your_branch
+```
+
+- Install dependencies
+
+```sh
+npm install
+```
+
+- Install Git hooks
+
+```sh
+npm run hooks:install
+```
+
+---
+
+## Subdomains
+
+### Register
+
+You can request a new subdomain using one of the following methods:
+
+1. Add a registration JSON file to the `subdomains/` directory.
+2. Run `npx mmsd <sub_domain>` in your terminal. The `mmsd` CLI creates `<sub_domain>.json` in the `subdomains/` directory. (Recommended)
+
+#### Using mmsd CLI
+
+We recommend using the `mmsd` CLI, which becomes available after the [initial setup][isg]. It checks whether your requested subdomain is available and, if available, creates the registration JSON file with a single command.
+
+For details about [`mmsd-cli`][mmsd], see the [examples][mmsd_example].
+
+```sh
+npx mmsd <your_requested_domain>
+# replace <your_requested_domain> with subdomain name
+```
+
+#### References
+
+Your request file must be JSON and match this structure:
+
+```json
+{
+  "$schema": "../schema/mmdevs.json",
+  "sub_domain": "example",
+  "cname_value": "example.github.io",
+  "request_type": "register",
+  "cfp": false
+}
+```
+
+- Full example and detailed notes: [example.jsonc][example_json]
+- Validation is enforced by: [JSON Schema][json_schema]
+
+##### Field reference
+
+1. `sub_domain` (required) The name part of `<sub_domain>.mmdevs.org`.
+2. `cname_value` (required) Must be one of the [supported CNAME targets](#supported-cname-targets).
+3. `request_type` (required) One of: `register`, `update`, `remove`.
+4. `cfp` (optional) Cloudflare proxy flag. In current validation flow, this is treated as `false`.
+
+##### Supported CNAME targets
+
+Only these targets are accepted:
+
+1. GitHub Pages user domain: `<username>.github.io`
+2. Vercel default CNAME: `cname.vercel-dns.com`
+3. Vercel project CNAME: `<code>.vercel-dns-<number>.com`
+
+#### Notes
+
+> If you are not using the `mmsd` CLI:
+>
+> 1. File extension must be `.json`.
+> 2. Filename should match `sub_domain`. Example: `sub_domain: "foo"` -> `subdomains/foo.json`.
+
+### Update
+
+To update the `cname_value` of your registered subdomain, edit your `.json` file in the `subdomains` directory.
+You must be the owner of that subdomain.
+
+Do not change the `sub_domain` field when updating `<your_subdomain>.json` (that means you must not change the subdomain name).
+
+#### Steps
+
+- Find and edit the existing `<your_subdomain>.json` file in `subdomains/` directory.
+
+- Update `cname_value` in `<your_subdomain>.json` with [supported CNAME targets](#supported-cname-targets).
+
+- Set `request_type` to `update` in `<your_subdomain>.json`.
+
+#### Example
+
+```jsonc
+{
+  "$schema": "../schema/mmdevs.json",
+  "sub_domain": "phowa",
+  "cname_value": "cname.vercel-dns.com", // Change from "phowa.github.io" to "cname.vercel-dns.com"
+  "request_type": "update", // Change from "register" to "update"
+}
+```
+
+### Remove
+
+To remove your registered subdomain, update `request_type` in your `.json` file in the `subdomains/` directory.
+
+`MMDEVS.ORG` records your `github_user_login` and `github_user_id` when you register a subdomain, so you must submit the removal request as that same user.
+
+#### Steps
+
+- Find and edit the existing `<your_subdomain>.json` file in `subdomains/` directory.
+
+- Set `request_type` to `remove` in `<your_subdomain>.json`.
+
+#### Example
+
+```jsonc
+{
+  "$schema": "../schema/mmdevs.json",
+  "sub_domain": "phowa",
+  "cname_value": "phowa.github.io",
+  "request_type": "remove", // Change from "register" or "update" to "remove"
+}
+```
+
+---
+
+## Push to branch
+
+Run the local helper script in your terminal:
+
+```sh
+npm run commit
+```
+
+The commit helper will:
+
+- Ask for a request type (`Register`, `Update`, `Remove`).
+
+```text
+Select a number for commit type:
+1) Register
+2) Update
+3) Remove
+Enter number:
+```
+
+- Ask for a commit message (it is recommended to use your requested subdomain name).
+
+```text
+Select a number for commit type:
+1) Register
+2) Update
+3) Remove
+Enter number: 1
+Enter commit message:
+```
+
+- Create a commit with this format: `<Type> : <name>.mmdevs.org`.
+
+- Automatically push to your current branch.
+
+- Using `npm run commit` with the `<Type> : <name>.mmdevs.org` commit format helps maintainers review and approve requests more easily.
+
+---
+
+## Open pull request
+
+### PR Template
+
+```md
+- [ ] I have read and accepted the [Terms and Conditions](https://docs.mmdevs.org/tnc)
+
+- [ ] There is reasonable content on the page
+
+Host repo of my page is <repo_url>
+
+The site content can be seen at <site_url>
+```
+
+### Guide
+
+No additional actions are required. Just complete the following:
+
+1. Mark the first checkbox as `[x]`.
+   Example: "- [x] I have read and accepted the [Terms and Conditions](https://docs.mmdevs.org/tnc)"
+
+2. Mark the second checkbox as `[x]`.
+   Example: "- [x] There is reasonable content on the page"
+
+3. Replace `repo_url` inside `<>` with your host repository URL.
+   Example: "Host repo of my page is `<https://github.com/{owner}/{repo}>`"
+
+4. Replace `site_url` inside `<>` with your page URL.
+   Example: "The site content can be seen at `<https://example.com>`"
+
+### Notes
+
+- Full example and detailed notes: [Raw PR Template](https://raw.githubusercontent.com/phothinmg/mmdevs.org/refs/heads/main/.github/pull_request_template.md)
+
+---
+
+## Hosting Providers
+
+### GitHub Pages
+
+If you have not already done so, sign in to GitHub and set up your GitHub Pages site by following [their instructions](https://docs.github.com/en/pages).
+
+Follow our [registration guide](#register) to request your subdomain.
+
+#### Publishing
+
+[**From a branch:**](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-from-a-branch)
+
+- Add a file named CNAME with the content `<sub_domain>.mmdevs.org` at source branch/source directory.
+- For details on configuring the publishing source for your GitHub Pages site, see [the docs](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site).
+
+`CNAME`
+
+```text
+<your_subdomain>.mmdevs.org
+```
+
+[**Using a workflow:**](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site#publishing-with-a-custom-github-actions-workflow)
+
+- A CNAME file will not be processed when publishing a site via a workflow.
+- Add `<sub_domain>.mmdevs.org` as a custom domain at the following example URL.
+- More details are available in [GitHub Docs](https://docs.github.com/en/pages/configuring-a-custom-domain-for-your-github-pages-site/managing-a-custom-domain-for-your-github-pages-site#configuring-a-subdomain).
+
+`example URL`
+
+```text
+https://github.com/{user_name}/{repo}/settings/pages
+```
+
+### Vercel
+
+- Follow our [registration guide](#register) to request your subdomain.
+
+- Use `cname.vercel-dns.com` or the newer `<code>.vercel-dns-017.com` target shown by Vercel (example: `d1d4fc829fe7bc7c.vercel-dns-017.com`).
+- See [Adding and configuring a custom domain](https://vercel.com/docs/domains/working-with-domains/add-a-domain#apex-domains) in the Vercel docs.
+
+---
+
+## Validation process
+
+### Automated checks
+
+1. Pull request template/format checks.
+2. Contributor location checks.
+3. JSON/request validation for changed files.
+
+### Maintainer review
+
+1. Verify site/repository ownership and content.
+2. Approve valid requests.
+3. Merge and apply DNS updates.
+
+<!-- markdownlint-disable MD053 -->
+
+[fork]: https://github.com/phothinmg/mmdevs.org/fork
+[mmsd]: /mmsd
+[isg]: /docs/initial-setup
+[example_json]: https://github.com/phothinmg/mmdevs.org/blob/main/example.jsonc
+[json_schema]: https://github.com/phothinmg/mmdevs.org/blob/main/schema/mmdevs.json
+[mmsd_example]: /mmsd#:~:text=subdomains/<sub_domain>.json-,CLI%20Examples

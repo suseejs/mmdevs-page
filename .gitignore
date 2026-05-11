@@ -5,3 +5,5 @@ _site
 node_modules
 package-lock.json
 a.html
+d.html
+s.css

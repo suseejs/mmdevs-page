@@ -6,7 +6,7 @@
 
   // Formatting
   "ruby.format": "rufo",
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
 
   // Run Rufo via Bundler when available
   "ruby.rufo.useBundler": true,
