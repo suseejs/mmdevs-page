@@ -24,6 +24,10 @@
     root.setAttribute("data-theme", theme);
   })();
 </script>
+<script
+  src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}"
+  type="module"
+></script>
 <!-- CSS and Fonts -->
 <link rel="preload" href="{{ '/css/fonts.css' | relative_url }}" as="style" />
 <link rel="stylesheet" href="{{ '/css/fonts.css' | relative_url }}" />
@@ -33,6 +37,15 @@
 <link rel="stylesheet" href="{{ '/css/rouge.css' | relative_url }}" />
 <link rel="preload" href="{{ '/css/docs.css' | relative_url }}" as="style" />
 <link rel="stylesheet" href="{{ '/css/docs.css' | relative_url }}" />
+<link
+  rel="preload"
+  href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}"
+  as="style"
+/>
+<link
+  rel="stylesheet"
+  href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}"
+/>
 <!-- Favicons -->
 <link
   rel="icon"

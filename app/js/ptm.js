@@ -17,18 +17,32 @@
       isDark ? "dark" : "light",
     );
   }
-
+  function applyPfAttr(theme) {
+    const pfDiv = document.getElementById("pf-search");
+    if (pfDiv) {
+      const attr = pfDiv.getAttribute("data-pf-theme");
+      if (!attr && theme === "dark") {
+        pfDiv.setAttribute("data-pf-theme", "dark");
+      }
+      if (attr && theme === "light") {
+        pfDiv.removeAttribute("data-pf-theme");
+      }
+    }
+  }
   // Initialize theme
   (function initTheme() {
     try {
       const stored = localStorage.getItem(ptmLocalStoreTheme);
       if (stored === "dark" || stored === "light") {
         applyTheme(stored);
+        applyPfAttr(stored);
       } else {
         applyTheme(getSystemTheme());
+        applyPfAttr(getSystemTheme());
       }
     } catch (e) {
       applyTheme(getSystemTheme());
+      applyPfAttr(getSystemTheme());
     }
   })();
 
@@ -50,6 +64,7 @@
       }
 
       applyTheme(newTheme);
+      applyPfAttr(newTheme);
     });
   })();
 

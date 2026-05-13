@@ -201,3 +201,79 @@ hr {
   outline: 2px solid var(--ptm-color-anchor);
   outline-offset: 2px;
 }
+/**/
+.nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 90rem;
+}
+.nav-left,
+.nav-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 1rem;
+  background: var(--ptm-bg);
+  border-radius: 6px;
+  margin-top: 7px;
+}
+.nav-right > a,
+.nav-right > button {
+  display: inline-block;
+  padding: 0.4em 1em;
+  color: var(--ptm-color-h1234);
+  font-size: 1rem;
+  background: none;
+  border-radius: 4px;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+// .nav-right > a {
+//   font-family: var(--ptm-font-mono);
+// }
+.nav-right > a:hover,
+.nav-right > button:hover {
+  color: var(--ptm-color-anchor-hover);
+}
+.nav-right > button {
+  outline: none;
+  border: none;
+}
+.nav-right > button:focus-visible {
+  outline: 2px solid var(--ptm-color-anchor);
+  outline-offset: 2px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --pf-text: #e5e5e5;
+    --pf-text-secondary: #a0a0a0;
+    --pf-text-muted: #949494;
+    --pf-background: #1a1a1a;
+    --pf-border: #333;
+    --pf-border-focus: #555;
+    --pf-skeleton: #2a2a2a;
+    --pf-skeleton-shine: #333;
+    --pf-hover: #252525;
+    --pf-mark: #e5e5e5;
+    --pf-scroll-shadow: rgba(255, 255, 255, 0.1);
+    --pf-outline-focus: #58a6ff;
+
+    --pf-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+    --pf-shadow-md: 0 4px 12px rgba(0, 0, 0, 0.4);
+    --pf-shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.5);
+
+    --pf-error-bg: #2a1a1a;
+    --pf-error-border: #5c2828;
+    --pf-error-text: #f87171;
+    --pf-error-text-secondary: #ef4444;
+  }
+}
