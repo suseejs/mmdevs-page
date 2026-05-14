@@ -7,3 +7,7 @@ package-lock.json
 a.html
 d.html
 s.css
+ptm
+# add bundle source
+vendor/bundle/
+.bundle/

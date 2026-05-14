@@ -8,6 +8,8 @@ layout: home
 
 ### Who can request a subdomain
 
+ <!-- cspell:disable -->
+
 - You are a GitHub user from Myanmar.
 - You are requesting a real project or personal page with reasonable content.
 - You can prove ownership or control of the target site.

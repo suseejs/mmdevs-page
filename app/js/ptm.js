@@ -69,13 +69,13 @@
   })();
 
   //------------------------------------------------------------------------------
-  const topBtn = $.document.getElementById("topBtn");
-  if (topBtn) {
-    topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
-    $.onscroll = () => {
-      topBtn.style.opacity = window.scrollY > 200 ? 1 : 0;
-    };
-  }
+  // const topBtn = $.document.getElementById("topBtn");
+  // if (topBtn) {
+  //   topBtn.onclick = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  //   $.onscroll = () => {
+  //     topBtn.style.opacity = window.scrollY > 200 ? 1 : 0;
+  //   };
+  // }
 
   //------------------------------------------------------------------------------
   (function initCodeBlockCopy() {
