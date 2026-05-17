@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<head>
+  <title>
+    {% if page.title %}
+      {{ page.title }} |
+    {% endif %}
+    {{ site.title }}</title>
+</head>
+{% include nav_bar.html %}
+<main>
+  <div class="post-wrapper">
+    <div class="sidebar">
+      <h3>Guide</h3>
+      {% include toc.html html=content h_min=2 h_max=3 class="sidebar-toc" anchor_class="toc-link" %}
+    </div>
+    <div class="markdown-body">{{ content }}</div>
+  </div>
+</main>

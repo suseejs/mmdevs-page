@@ -1,0 +1,51 @@
+<!-- cspell:disable -->
+<div class="top"></div>
+<header>
+  <nav>
+    <div class="left">
+      {% include components/logo.html %} {% include components/pagefind.html %}
+    </div>
+
+    <div class="right">
+      <div class="nav_items">
+        <a
+          href="{{ '/guide' | relative_url }}"
+          rel="noopener noreferrer"
+          class="nav_item"
+          title="Guide"
+          type="button">
+          Guide
+        </a>
+      </div>
+      <div class="nav_icons">
+        <button
+          type="button"
+          id="theme-btn"
+          class="nav_icon"
+          aria-label="theme">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <path
+              stroke="none"
+              d="M0 0h24v24H0z"
+              fill="none" />
+            <path d="M8 12a4 4 0 1 0 8 0a4 4 0 1 0 -8 0" />
+            <path d="M3 12h1m8 -9v1m8 8h1m-9 8v1m-6.4 -15.4l.7 .7m12.1 -.7l-.7 .7m0 11.4l.7 .7m-12.1 -.7l-.7 .7" />
+          </svg>
+        </button>
+
+        {% if site.mmdocs && site.mmdocs.github_url %}
+          {% include components/github_icon.html url=site.mmdocs.github_url %}
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</header>

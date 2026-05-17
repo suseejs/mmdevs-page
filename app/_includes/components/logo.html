@@ -1,0 +1,15 @@
+<a
+  href="{{ '/' | relative_url }}"
+  class="logo"
+  type="button">
+  {% if site.mmdocs && site.mmdocs.logo %}
+    {% assign logo = site.mmdocs.logo %}
+    <img
+      src="{{ logo | relative_url }}"
+      alt="logo"
+      width="36"
+      height="36"
+      style="border-radius: 50%" />
+  {% endif %}
+  <span>{{ site.title }}</span>
+</a>

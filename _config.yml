@@ -1,7 +1,7 @@
 url: https://docs.mmdevs.org/
 # baseurl: /mmdevs-page
 # site
-title: mmdevs.org
+title: MMDEVS
 source: app
 markdown: kramdown
 sass:
@@ -11,17 +11,22 @@ plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
   - jekyll-pagefind
+  - jekyll-minify-js
 exclude:
   - Makefile
 collections:
   docs:
     output: true
-terser:
+minify_js:
   enabled: true # disable to skip minification
   output_dir: js # destination directory under site dest
   compress: true # enable compression
   mangle: true # enable name mangling
   source_map: true # produce .map files
-  exclude:
-    - "**/*.min.js" # glob patterns (relative to source dir) to skip
-pagefind: _bin/pagefind # where pagefind was located
+jekyll_pagefind:
+  quiet: true
+  output_path: pf
+# mmdocs theme
+mmdocs:
+  logo: /images/logo-180.webp
+  github_url: https://github.com/phothinmg/mmdevs.org

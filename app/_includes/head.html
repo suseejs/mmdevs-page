@@ -1,88 +1,69 @@
+<!-- cspell:disable -->
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <meta name="description" content="MMDEVS.ORG Documentation" />
-<script>
-  (function () {
-    var key = "ptm_local_theme";
-    var theme = "light";
-
-    if (
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
-      theme = "dark";
-    }
-
-    try {
-      var stored = localStorage.getItem(key);
-      if (stored === "dark" || stored === "light") {
-        theme = stored;
-      }
-    } catch (e) {}
-    var root = document.documentElement;
-    root.classList.toggle("dark", theme === "dark");
-    root.setAttribute("data-theme", theme);
-  })();
-</script>
-<script
-  src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}"
-  type="module"
-></script>
-<!-- CSS and Fonts -->
-<link rel="preload" href="{{ '/css/fonts.css' | relative_url }}" as="style" />
+  <!-- CSS and Fonts -->
+<link
+  rel="preload"
+  href="{{ '/css/fonts.css' | relative_url }}"
+  as="style" />
 <link rel="stylesheet" href="{{ '/css/fonts.css' | relative_url }}" />
-<link rel="preload" href="{{ '/css/index.css' | relative_url }}" as="style" />
+<link
+  rel="preload"
+  href="{{ '/css/index.css' | relative_url }}"
+  as="style" />
 <link rel="stylesheet" href="{{ '/css/index.css' | relative_url }}" />
-<link rel="preload" href="{{ '/css/rouge.css' | relative_url }}" as="style" />
+<link
+  rel="preload"
+  href="{{ '/css/rouge.css' | relative_url }}"
+  as="style" />
 <link rel="stylesheet" href="{{ '/css/rouge.css' | relative_url }}" />
-<link rel="preload" href="{{ '/css/docs.css' | relative_url }}" as="style" />
+<link
+  rel="preload"
+  href="{{ '/css/docs.css' | relative_url }}"
+  as="style" />
 <link rel="stylesheet" href="{{ '/css/docs.css' | relative_url }}" />
+<!-- Pagefind Builtin Component UI -->
+<!-- JS -->
+<script src="{{ '/pagefind/pagefind-component-ui.js' | relative_url }}" type="module"></script>
+<!-- CSS -->
 <link
   rel="preload"
   href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}"
-  as="style"
-/>
-<link
-  rel="stylesheet"
-  href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}"
-/>
+  as="style" />
+<link rel="stylesheet" href="{{ '/pagefind/pagefind-component-ui.css' | relative_url }}" />
+  <!-- Pagefind Local -->
 <link
   rel="preload"
   href="{{ '/css/pagefind.css' | relative_url }}"
-  as="style"
-/>
+  as="style" />
 <link rel="stylesheet" href="{{ '/css/pagefind.css' | relative_url }}" />
-<!-- Favicons -->
+  <!-- Favicons -->
 <link
   rel="icon"
   type="image/png"
   href="{{ '/favicon/android-chrome-512x512.png' | relative_url }}"
-  sizes="512x512"
-/>
+  sizes="512x512" />
 <link
   rel="icon"
   type="image/png"
   href="{{ '/favicon/android-chrome-192x192.png' | relative_url }}"
-  sizes="192x192"
-/>
+  sizes="192x192" />
 <link rel="shortcut icon" href="{{ '/favicon/favicon.ico' | relative_url }}" />
 <link
   rel="apple-touch-icon"
   sizes="180x180"
-  href="{{ '/favicon/apple-touch-icon.png' | relative_url }}"
-/>
+  href="{{ '/favicon/apple-touch-icon.png' | relative_url }}" />
 <link
   rel="icon"
   type="image/png"
   sizes="32x32"
-  href="{{ '/favicon/favicon-32x32.png' | relative_url }}"
-/>
+  href="{{ '/favicon/favicon-32x32.png' | relative_url }}" />
 <link
   rel="icon"
   type="image/png"
   sizes="16x16"
-  href="{{ '/favicon/favicon-16x16.png' | relative_url }}"
-/>
+  href="{{ '/favicon/favicon-16x16.png' | relative_url }}" />
 <link rel="manifest" href="{{ '/favicon/site.webmanifest' | relative_url }}" />
 <!-- MathJax -->
 <script>
@@ -102,12 +83,11 @@
 <script
   id="MathJax-script"
   async
-  src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"
-></script>
+  src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link
-  href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100..900&display=swap"
-  rel="stylesheet"
-/>
+  rel="preconnect"
+  href="https://fonts.gstatic.com"
+  crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Myanmar:wght@100..900&display=swap" rel="stylesheet" />

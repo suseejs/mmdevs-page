@@ -1,12 +1,13 @@
 <!doctype html>
 <html lang="en">
   <head>
-    {% include head.html %}
+  {% include head.html %}
     <!-- Jekyll Plugin -->
     {% feed_meta %} {% seo %}
   </head>
   <body>
     {{ content }}
-    <script src="{{ '/js/ptm.js' | relative_url }}"></script>
+    <script src="{{ '/js/mmdocs.js' | relative_url }}"></script>
+    <script src="{{ '/js/copy_code.js' | relative_url }}"></script>
   </body>
 </html>
